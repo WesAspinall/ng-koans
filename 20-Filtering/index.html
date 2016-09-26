@@ -1,0 +1,42 @@
+<!doctype html>
+<html ng-app='app'>
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Filtering</title>
+        <link rel="author" href="humans.txt">
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.js'></script>
+    </head>
+    <body>
+      {{5+5}}
+      <div ng-controller='MoviesCtrl as vm'>
+
+        <input
+          type='text'
+          placeholder='Search by year'
+          ng-model='search'>
+
+        <a href='' ng-click='type = "year"'>Year</a>
+        <a href='' ng-click='type = "title"'>Movies</a>
+       <!--  <ul>
+          <li ng-repeat="movie in vm.favorites | orderBy: type: true">
+            <p>{{movie.title}}</p>
+            <p>released in: {{movie.year}}</p>
+          </li>
+        </ul> -->
+
+         <ul>
+          <li ng-repeat="movie in vm.favorites | filter: {year: search }">
+            <p>{{movie.title}}</p>
+            <p>released in: {{movie.year}}</p>
+          </li>
+        </ul>
+
+      </div>
+
+
+        <script src="app.js"></script>
+        <script src="Movies.controller.js"></script>
+    </body>
+</html>
