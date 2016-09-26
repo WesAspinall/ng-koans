@@ -1,0 +1,24 @@
+<!doctype html>
+<html ng-app='app'>
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Filtering</title>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.js'></script>
+    </head>
+    
+    <body>
+      <div ng-controller='TodoCtrl as vm'>
+        <ul>
+            <li ng-repeat='todo in vm.list'>
+                <p>{{todo.title}}</p>
+            </li>
+        </ul>    
+      </div>
+
+        <script src="../app.module.js"></script>
+        <script src="todo.controller.js"></script>
+        <script src="todo.service.js"></script>
+    </body>
+</html>
