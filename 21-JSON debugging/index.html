@@ -1,0 +1,21 @@
+<!doctype html>
+<html ng-app='app'>
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Filtering</title>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.js'></script>
+    </head>
+    <body>
+      <div ng-controller='MainCtrl as vm'>
+
+        <input type='text' ng-model='vm.person.location'>
+        <pre>{{ vm.person | json }}</pre>
+
+      </div>
+
+        <script src="app.js"></script>
+        <script src="Main.controller.js"></script>
+    </body>
+</html>
