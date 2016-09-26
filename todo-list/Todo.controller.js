@@ -1,7 +1,7 @@
 let TodoCtrl = function(TodoService) {
   
   let vm = this;
-  vm.title = 'Todo List';
+  vm.viewTitle = 'Todo List';
   vm.list = [];
   vm.newTodo = '';
   vm.toggleState = toggleState;
@@ -55,7 +55,7 @@ let TodoCtrl = function(TodoService) {
       .update(item);
   }
 
-  function toggleState() {
+  function toggleState(item) {
     TodoService
       .update(item)
       .then((res) => {

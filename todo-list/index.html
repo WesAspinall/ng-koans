@@ -10,57 +10,13 @@
   </head>
 <body>
 
- <div ng-controller='TodoCtrl as vm'>
-    <h1>{{::vm.title}}</h1>
-   <form class='todo__form' 
-         ng-submit='vm.addTodo();'>
-
-    <input type='text' 
-        ng-model='vm.newTodo'
-        placeholder='add new todo'>
-        <button>add new todo</button>
-   </form>
-
-    <ul class='todo__list'>
-        <li ng-repeat='item in vm.list'>
-
-            <input 
-                type='checkbox' 
-                id='todo-{{$index}}'
-                ng-model='todo.title'
-                ng-change='todo.toggleState(item)'>
-
-            <label 
-                class='toggle' 
-                for='todo-{{$index}}'>
-            </label>
-
-            <span 
-                ng-dblclick='showEditField = true'
-                ng-hide='showEditField'>
-            {{item.title}}
-            </span>
-
-            <div ng-show='showEditField'>
-                <input 
-                    type='text' 
-                    ng-model='item.title'
-                    ng-blur='vm.updateTodo(item, $index); showEditField = false'>
-            </div>
-
-            <a href="" 
-                ng-click="vm.removeTodo(item, $index);">
-                &#215;
-            </a>
-
-        </li>
-    </ul>
-
-</div>
+<todo-app></todo-app>
 
 
-<script src="../app.module.js"></script>
-<script src="Todo.controller.js"></script>
-<script src="Todo.service.js"></script>
+    <script src="../app.module.js"></script>
+    <script src="Todo.controller.js"></script>
+    <script src="Todo.service.js"></script>
+    <script src="todoAutofocus.directive.js"></script>
+    <script src="todoApp.directive.js"></script>
 </body>
 </html>
