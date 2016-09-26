@@ -1,4 +1,4 @@
-let UserCtrl = function($http, UserService) {
+let UserCtrl = function(UserService) {
   let vm = this;
   let API = 'http://jsonplaceholder.typicode.com/users/';
 
@@ -12,7 +12,7 @@ let UserCtrl = function($http, UserService) {
     if(!vm.userId) {
       return; 
     }
-    UserService.getUser(2)
+    UserService.getUser(vm.userId)
     .then((res) => vm.chosenUser = res);
   }
 
