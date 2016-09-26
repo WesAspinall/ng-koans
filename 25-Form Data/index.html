@@ -1,0 +1,22 @@
+<!doctype html>
+  <html ng-app='app'>
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Directives</title>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.js'></script>
+</head>
+
+  <body>
+   
+    <div ng-controller='OrderCtrl as order'>
+      <order-form data='order.customerOrder' submit='order.submitOrder();'></order-form>
+    </div>
+
+    <script src="../app.module.js"></script>
+    <script src="Order.controller.js"></script>
+    <script src="OrderForm.controller.js"></script>
+    <script src="order-form.directive.js"></script>
+  </body>
+</html>
