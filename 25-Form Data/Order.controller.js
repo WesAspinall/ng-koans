@@ -15,7 +15,8 @@ let OrderCtrl = function() {
   vm.submitOrder = function() {
     //communicate with api
 
-    console.log('hello');
+    console.log('submitted!', this.customerOrder);
+
   }
 
 };

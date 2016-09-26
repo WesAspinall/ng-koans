@@ -1,4 +1,5 @@
 function orderForm() {
+  
   return {
     restrict: 'E',
     scope: {},
@@ -8,8 +9,7 @@ function orderForm() {
     },
     controller: 'OrderFormCtrl as form',
     template: `
-      // <pre>{{form.data | json}}</pre>
-      <pre>{{orderForm.data| json}}</pre>
+
       <form name='orderForm' novalidate ng-submit='form.onSubmit();'>
         <input name='name' required='' type='text' ng-model='form.data.name' placeholder='Your name'>
         <input name='email' required='' type='email' ng-model='form.data.email' placeholder='Your email'>
@@ -17,8 +17,8 @@ function orderForm() {
           <select name='orderChoice' require='' ng-model='form.data.product' ng-options='product.label for product in form.products'>
             <option value=''>Select...</option>
           </select>
-          <textarea required='' placeholder='Any messages (optional)' ng-model='form.data.comments' name='comments'></textarea>
-        <button type='submit'>
+          <textarea placeholder='Any messages (optional)' ng-model='form.data.comments' name='comments'></textarea>
+        <button type='submit' ng-disabled='orderForm.$invalid'>
           Order
         </button>
       </form>
@@ -29,3 +29,7 @@ function orderForm() {
 angular
   .module('app')
   .directive('orderForm', orderForm);
+
+  //ng-disabled: removes button functionality if form is invalid
+       // <pre>{{form.data | json}}</pre>
+      // <pre>{{orderForm | json}}</pre>
