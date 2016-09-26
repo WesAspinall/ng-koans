@@ -1,12 +1,11 @@
 
 
-* {
-  box-sizing: border-box;
+body {
+  padding: 2em;
   list-style-type: none;
   font-family: 'Helvetica', Courier;
   font-weight: 100;
 }
-
 
 h1 {
   font-weight: 900;
@@ -28,8 +27,4 @@ li {
 
 a {
   color: #5E97F5;
-}
-
-body {
-  padding: 2em;
 }
