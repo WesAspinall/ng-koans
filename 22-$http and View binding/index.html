@@ -7,16 +7,21 @@
         <title>Filtering</title>
         <script src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.js'></script>
     </head>
+    
     <body>
-        
-      <div ng-controller='MainCtrl as vm'>
+      <div ng-controller='UserCtrl as vm'>
 
-        <input type='text' ng-model='vm.person.location'>
-        <pre>{{ vm.person | json }}</pre>
-
+          <form ng-submit='vm.getUser();'>
+            <input type='text' ng-model='vm.userId'>
+            <button type='submit'>
+              Search user
+            </button>
+          </form>
+          <pre> {{ vm.chosenUser }} </pre>
       </div>
 
         <script src="../app.module.js"></script>
-        <script src="Main.controller.js"></script>
+        <script src="User.controller.js"></script>
+        <script src="User.service.js"></script>
     </body>
 </html>
