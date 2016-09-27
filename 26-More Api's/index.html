@@ -1,0 +1,27 @@
+<!doctype html>
+  <html ng-app='app'>
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Directives</title>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.js'></script>
+</head>
+
+  <body>
+   
+    <div ng-controller='PokeCtrl as vm'>
+      <pre> {{vm.list | json}} </pre>
+      <ul>
+        <li ng-repeat='pokemon in vm.list'>
+          <p>{{pokemon.name}}</p>
+        </li>
+      </ul>
+    </div>
+
+
+    <script src="../app.module.js"></script>
+    <script src="Poke.controller.js"></script>
+    <script src='Poke.service.js'></script>
+  </body>
+</html>
