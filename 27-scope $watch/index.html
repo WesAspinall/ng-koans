@@ -1,0 +1,35 @@
+<!doctype html>
+  <html ng-app='app'>
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>$scope.$watch</title>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.js'></script>
+</head>
+
+  <body>
+
+   <div class="counter" ng-controller="CountCtrl as counter">
+    {{couter.hello}}
+
+      <h3>Counter: {{ counter.count }}</h3>
+      <a class="counter__increment" href="" ng-click="counter.increment()">
+        Increment Counter
+      </a> -
+      <a class="counter__decrement" href="" ng-click="counter.decrement()">
+        Decrement Counter
+      </a>
+      <ul>
+        <li ng-repeat="list in counter.countList">
+          <input type="text" ng-model="list.id">
+        </li>
+      </ul>
+    </div>
+ 
+
+
+    <script src="../app.module.js"></script>
+    <script src="Count.controller.js"></script>
+  </body>
+</html>
