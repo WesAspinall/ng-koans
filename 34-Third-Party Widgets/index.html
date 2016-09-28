@@ -1,0 +1,24 @@
+<!doctype html>
+<html ng-app='app'>
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Pikaday</title>
+         <script src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.js'></script>
+        <script src="js/pikaday.js"></script>
+        <link href="css/pikaday.css" rel="stylesheet">
+    </head>
+    <body>
+
+      <div ng-controller='DateController as ctrl'>
+        Parent date: {{ctrl.date | date: 'MMM d, yyyy' }}
+        <date-picker date='ctrl.date'></date-picker>
+      </div>
+        
+      <script src="js/app.js"></script>
+      <script src="js/services/PikadayService.js"></script>
+      <script src="js/controllers/DateController.js"></script>
+      <script src="js/directives/DatePicker.js"></script>
+    </body>
+</html>
