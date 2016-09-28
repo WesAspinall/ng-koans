@@ -3,6 +3,7 @@ body {
   list-style-type: none;
   font-family: 'Helvetica', Courier;
   font-weight: 100;
+  background-color: #EFEDF0; /*grey*/
 }
 
 h1 {
@@ -52,6 +53,27 @@ a {
   border: 1px solid #76B176; /*green*/
 }
 
-.left {
-  text-align: none;
+.tabs {
+  background-color: white;
+}
+
+.tabs__list {
+  width: 100%;
+}
+
+.tabs__list li {
+  display: inline-block;
+  text-decoration: none;
+  color: black;
+  padding-left: 0;
+}
+
+.tabs__list a  {
+  text-decoration: none;
+  width: 100%;
+  color: black;
+}
+.tabs__content {
+  width: 100%;
+  padding: 2em;
 }
