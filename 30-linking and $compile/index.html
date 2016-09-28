@@ -1,0 +1,28 @@
+<!doctype html>
+  <html ng-app='app'>
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>linking and compile</title>
+  <link rel="stylesheet" type="text/css" href="../css/main.css">
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.js'></script>
+</head>
+
+  <body>
+
+  <div ng-controller='ErrCtrl as errors'>
+    <div 
+      ng-repeat='error in errors.list'
+      type='{{error.type}}'
+      error-message>
+      {{error.message}}
+    </div>
+  </div>
+
+    <script src="app.js"></script>
+    <script src="Main.controller.js"></script>
+    <script src="Err.controller.js"></script>
+    <script src="errorMessage.directive.js"></script>
+  </body>
+</html>

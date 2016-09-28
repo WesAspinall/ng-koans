@@ -7,7 +7,7 @@ body {
 
 h1 {
   font-weight: 900;
-  text-align: center;
+ /* text-align: center;*/
   color: #7F7F7F;
 }
 
@@ -35,4 +35,23 @@ a {
 
 .counter--drink {
   color: red;
+}
+
+.error {
+  padding: 1em;
+  margin: 1em 0;
+  border-radius: 5px;
+  border: 1px solid #6E7CFD; /*blue*/
+}
+
+.error--warning {
+  border: 1px solid #FD9DA1; /*red*/
+}
+
+.error--invalid {
+  border: 1px solid #76B176; /*green*/
+}
+
+.left {
+  text-align: none;
 }
