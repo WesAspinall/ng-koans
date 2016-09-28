@@ -27,3 +27,12 @@ li {
 a {
   color: #5E97F5;
 }
+
+
+.counter--food {
+  color: blue;
+}
+
+.counter--drink {
+  color: red;
+}

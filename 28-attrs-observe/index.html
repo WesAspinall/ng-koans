@@ -1,0 +1,25 @@
+<!doctype html>
+  <html ng-app='app'>
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>$attrs.$observe/$updateClass</title>
+  <link rel="stylesheet" type="text/css" href="../css/main.css">
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.js'></script>
+</head>
+
+  <body>
+
+   <div class="counter" ng-controller="Counter1Ctrl as counter">
+      <counter1 name='{{counter.name}}'></counter1>
+    </div>
+ 
+
+
+    <script src="../app.module.js"></script>
+    <script src="Counter1.controller.js"></script>
+    <script src="count-1.directive.js"></script>
+
+  </body>
+</html>
