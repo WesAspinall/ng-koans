@@ -9,6 +9,9 @@ function Tab() {
         <div ng-transclude></div>
       </div>
     `,
+    // the require and link function
+    // together give you access to the 
+    // delegated controller (ie. the one in the Tabs directive)
     require: '^^tabs',
     link: function($scope, $element, $attrs, $ctrl) {
       $scope.tab = {
