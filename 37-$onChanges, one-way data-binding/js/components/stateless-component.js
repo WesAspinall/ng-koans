@@ -11,6 +11,7 @@ var statelessComponent = {
   },
 
   controller: function() {
+    
     // angular.copy breaks the binding between the 
     // parent and the child
     // treats the parent object data as immutable
@@ -19,7 +20,7 @@ var statelessComponent = {
         this.user = angular.copy(this.user);
       }
     }
-    
+
     this.updateUser = function() {
       this.onUpdate({
         $event: {
